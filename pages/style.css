@@ -1986,6 +1986,10 @@ html{
   height: auto;
 }
 
+.h-\[300px\]{
+  height: 300px;
+}
+
 .h-60{
   height: 15rem;
 }
@@ -2012,6 +2016,10 @@ html{
 
 .w-6{
   width: 1.5rem;
+}
+
+.w-\[300px\]{
+  width: 300px;
 }
 
 .w-12{
@@ -2412,12 +2420,20 @@ html{
     height: 8rem;
   }
 
+  .md\:h-\[400px\]{
+    height: 400px;
+  }
+
   .md\:h-80{
     height: 20rem;
   }
 
   .md\:w-6\/12{
     width: 50%;
+  }
+
+  .md\:w-\[500px\]{
+    width: 500px;
   }
 
   .md\:w-full{
