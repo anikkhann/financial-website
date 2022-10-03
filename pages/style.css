@@ -2039,6 +2039,13 @@ html{
   position: relative;
 }
 
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .top-0{
   top: 0px;
 }
@@ -2087,6 +2094,10 @@ html{
   margin-top: 0.75rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
@@ -2101,10 +2112,6 @@ html{
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .mt-\[50px\]{
@@ -2167,6 +2174,10 @@ html{
   height: 1.5rem;
 }
 
+.h-60{
+  height: 15rem;
+}
+
 .h-full{
   height: 100%;
 }
@@ -2177,10 +2188,6 @@ html{
 
 .h-\[300px\]{
   height: 300px;
-}
-
-.h-60{
-  height: 15rem;
 }
 
 .h-12{
@@ -2291,6 +2298,10 @@ html{
   gap: 0.5rem;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -2352,11 +2363,6 @@ html{
   background-color: rgb(248 246 246 / var(--tw-bg-opacity));
 }
 
-.bg-gray-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
 }
@@ -2404,6 +2410,11 @@ html{
   padding-right: 1.25rem;
 }
 
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2412,11 +2423,6 @@ html{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .py-4{
@@ -2475,24 +2481,24 @@ html{
   text-align: center;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-3xl{
@@ -2616,6 +2622,15 @@ html{
   line-height: 1.25rem;
 }
 
+.hover\:rotate-180:hover{
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:transform:hover{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -2640,10 +2655,6 @@ html{
     margin-bottom: 1.25rem;
   }
 
-  .sm\:flex{
-    display: flex;
-  }
-
   .sm\:h-80{
     height: 20rem;
   }
@@ -2654,14 +2665,6 @@ html{
 
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:items-center{
-    align-items: center;
-  }
-
-  .sm\:justify-between{
-    justify-content: space-between;
   }
 
   .sm\:justify-items-center{
@@ -2684,6 +2687,10 @@ html{
 }
 
 @media (min-width: 768px){
+  .md\:absolute{
+    position: absolute;
+  }
+
   .md\:relative{
     position: relative;
   }
@@ -2691,6 +2698,16 @@ html{
   .md\:-inset-y-20{
     top: -5rem;
     bottom: -5rem;
+  }
+
+  .md\:inset-x-\[60\%\]{
+    left: 60%;
+    right: 60%;
+  }
+
+  .md\:inset-y-4{
+    top: 1rem;
+    bottom: 1rem;
   }
 
   .md\:inset-y-5{
@@ -2743,12 +2760,24 @@ html{
     height: 8rem;
   }
 
+  .md\:h-\[500px\]{
+    height: 500px;
+  }
+
+  .md\:h-auto{
+    height: auto;
+  }
+
   .md\:h-\[400px\]{
     height: 400px;
   }
 
   .md\:h-80{
     height: 20rem;
+  }
+
+  .md\:w-\[35\%\]{
+    width: 35%;
   }
 
   .md\:w-6\/12{
@@ -2813,6 +2842,15 @@ html{
 
   .md\:rounded-br-\[90px\]{
     border-bottom-right-radius: 90px;
+  }
+
+  .md\:bg-primary\/30{
+    background-color: hsl(var(--p) / 0.3);
+  }
+
+  .md\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .md\:px-28{
@@ -2891,6 +2929,20 @@ html{
 }
 
 @media (min-width: 1024px){
+  .lg\:absolute{
+    position: absolute;
+  }
+
+  .lg\:inset-x-\[60\%\]{
+    left: 60%;
+    right: 60%;
+  }
+
+  .lg\:inset-y-16{
+    top: 4rem;
+    bottom: 4rem;
+  }
+
   .lg\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -2908,8 +2960,16 @@ html{
     display: none;
   }
 
+  .lg\:h-auto{
+    height: auto;
+  }
+
   .lg\:h-full{
     height: 100%;
+  }
+
+  .lg\:w-\[30\%\]{
+    width: 30%;
   }
 
   .lg\:w-6\/12{
@@ -2941,6 +3001,10 @@ html{
   .lg\:py-7{
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+
+  .lg\:pb-2{
+    padding-bottom: 0.5rem;
   }
 
   .lg\:pl-0{
