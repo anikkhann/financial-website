@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9b1853b890.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100">
+      <!-- Navbar work  -->
+      <div
+        class="h-16 bg-white shadow-sm pl-8 md:pl-80 pr-8 top-0 left-0 fixed w-full flex items-center"
+      >
+        <div class="w-6 cursor-pointer md:hidden block" id="hambarg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+
+        <div class="relative md:block hidden">
+          <svg
+            class="absolute left-2 top-2 w-6 text-gray-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+
+          <input
+            type="text"
+            placeholder="Search"
+            class="block w-32 sm:w-72 shadow border-none rounded-3xl focus:outline-none py-2 bg-gray-100 text-base text-gray-600 pl-11 pr-2"
+          />
+        </div>
+
+        <div class="ml-auto flex items-center">
+          <div>
+            <svg
+              class="w-6 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+              />
+            </svg>
+          </div>
+          <div class="ml-4 relative">
+            <div class="cursor-pointer">
+              <img
+                id="dropdown"
+                class="h-8 w-8 rounded-full object-cover"
+                src="https://ui-avatars.com/api/?name=MU"
+                alt=""
+              />
+            </div>
+            <div
+              id="dropdown_content"
+              class="hidden absolute z-50 mt-2 rounded-md shadow-lg w-48 right-0 py-1 bg-white"
+            >
+              <div class="px-4 py-2 text-xs text-gray-400">Manage Account</div>
+              <a
+                href=""
+                class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 transition"
+                >Profile</a
+              >
+              <div class="border-t border-gray-100"></div>
+              <a
+                href=""
+                class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 transition"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar work -->
+      <div
+        id="sidebar"
+        class="fixed left-0 top-0 w-72 h-full bg-gray-800 shadow-md z-10 flex flex-col transition-all"
+      >
+        <div
+          class="text-white font-bold text-base uppercase text-center py-5 bg-gray-900 relative"
+        >
+          Admin
+          <svg
+            id="sidebarClose"
+            class="absolute block md:hidden w-6 right-3 top-5 cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col justify-between flex-grow">
+          <ul class="py-5">
+            <li>
+              <a
+                href=""
+                class="flex items-center my-1 px-4 py-3 text-white border-l-4 border-blue-600 bg-gray-900"
+              >
+                <svg
+                  class="w-5 mr-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="flex items-center my-1 px-4 py-3 text-white border-l-4 border-transparent transition hover:border-blue-600 hover:bg-gray-900"
+              >
+                <svg
+                  class="sidebar_dropdown w-5 mr-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                  />
+                </svg>
+
+                Category
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center my-1 px-4 py-3 text-white border-l-4 border-transparent transition hover:border-blue-600 hover:bg-gray-900"
+              >
+                <svg
+                  class="w-5 mr-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+                Product
+              </a>
+            </li>
+
+            <li>
+              <a
+                id="sidebar_dropdown"
+                type="button"
+                class="flex items-center my-1 px-4 py-3 text-white border-l-4 border-transparent transition hover:border-blue-600 hover:bg-gray-900"
+                aria-controls="dropdown-example"
+                data-collapse-toggle="dropdown-example"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+
+                <span
+                  class="flex-1 ml-3 text-left whitespace-nowrap"
+                  sidebar-toggle-item
+                  >E-commerce</span
+                >
+                <svg
+                  id="down_arrow"
+                  sidebar-toggle-item
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <ul
+                id="sidebar_dropdown_content"
+                class="hidden py-2 space-y-2 mt-2 px-2 bg-gray-800 rounded-md"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 pl-12 w-full text-base font-normal rounded transition duration-75 group hover:bg-gray-900 text-white"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 pl-12 w-full text-base font-normal rounded transition duration-75 group hover:bg-gray-900 text-white"
+                    >Billing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 pl-12 w-full text-base font-normal rounded transition duration-75 group hover:bg-gray-900 text-white"
+                    >Invoice</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="md:hidden block">
+            <div class="relative mx-5 mb-5">
+              <svg
+                class="absolute left-2 top-2 w-6 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search"
+                class="block w-full shadow border-none rounded-3xl focus:outline-none py-2 bg-gray-700 text-base text-gray-200 pl-11 pr-2"
+              />
+            </div>
+            <div
+              class="border-t border-gray-600 flex items-center justify-center py-4"
+            >
+              <div class="cursor-pointer mr-4">
+                <img
+                  class="h-8 w-8 rounded-full object-cover"
+                  src="https://ui-avatars.com/api/?name=MU"
+                  alt=""
+                />
+              </div>
+              <a href="" class="text-gray-200 text-md capitalize">Muit</a>
+              <!-- <div class="ml-auto cursor-pointer">
+                <svg
+                  class="w-6 cursor-pointer text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main body work -->
+      <div class="pt-24 pr-8 pl-8 md:pl-80">
+        <h1 class="text-3xl text-gray-700 font-bold">Welcome to Dashboard</h1>
+      </div>
+    </div>
+
+    <script>
+      // navbar profile show& hide function
+      document
+        .getElementById("dropdown")
+        .addEventListener("click", function () {
+          document
+            .getElementById("dropdown_content")
+            .classList.toggle("hidden");
+        });
+      // sidebar menu dropdown function
+      document
+        .getElementById("sidebar_dropdown")
+        .addEventListener("click", function () {
+          // document.getElementById('down_arrow').style.transform = 'rotate(180deg)';
+          document
+            .getElementById("sidebar_dropdown_content")
+            .classList.toggle("hidden");
+        });
+      //sidebar show/hide function
+      document.getElementById("hambarg").addEventListener("click", function () {
+        document.getElementById("sidebar").classList.add("active");
+      });
+      document
+        .getElementById("sidebarClose")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.remove("active");
+        });
+    </script>
+  </body>
+</html>
